@@ -1,0 +1,8 @@
+# The following commands generate a certificate signing request by name mylocalhost.csr which can be used to generate certificates.
+# Note that openssl must have been installed. And myhostcsr.conf file must have been created as well.
+# Generate key with an alias myalias. Jboss will not allow to install certificates without a key.
+# This generates a certificate signing request by name myhost.
+
+openssl req -new -newkey rsa:4096 -sha256 -nodes -out mylocalhost.csr -keyout myhost.key -config sslcsr.conf
+
+
